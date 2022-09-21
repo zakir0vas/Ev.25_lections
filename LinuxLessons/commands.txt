@@ -1,0 +1,18 @@
+
+Linux Commands 
+Ctrl+Alt+T - Команда открыти терминала 
+~ - Символ дома Директории
+\- Символ домачнеи Директории
+.. предыдущая Дир
+. Текущая Дир
+ls(list) -komanda dlia vyvoda vsex direktorii i fails direktorii   
+CD change Directory- Команда для изменения (переходов) одной директории на другую cd Название Директории 
+mkdir (Make Directory) Creat new Dorectory 
+Touch Creating File 
+rm- remove Delete files 
+rmdir- Romove Directory Delete too
+pwd Present(Print) work Directory  Showing present directory(way to) 
+rm -rf Принудительное удаление 
+ls -a список как скрытых так и обычных фаилов
+nan path to file - otkroetsa fail dlia redaktirovania v graficheskom interfaice 
+cat (fail name) vyvodit soderjimoe faila 
