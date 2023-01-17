@@ -1,0 +1,215 @@
+# # repeat.py3
+
+# db = {
+#     'admin': {'username': 'admin', 'password': '1'},
+#     'hello': {'username': 'hello', 'password': 'hello world'}
+
+# }
+# while True:
+#     print("Hello, Выберите дейтсвия:")
+#     choice = input('1-register, 2-login, 3-show users: ')
+#     if choice.strip() == '1':
+#         print('Please register new account')
+#         username = input('Enter the *username: ')
+#         password = input('Enter the *password: ')
+#         password2 = input('Enter *password confirmarion: ')
+#         full_name = input('Enteryour full name:')
+
+#         if password != password2:
+#             print('The password must be match!')
+#             continue
+#         elif len(password) < 4:
+#             print('Invalid password!')
+#         if len(username) < 4:
+#             print('Invalid username!')
+#             continue
+#         if full_name:
+#             db[username] = {'username': username, 'password': password, 'full_name': full_name}
+#             print('Successfully registered!')
+#         else:
+#             db[username] = {'username': username, 'password': password}
+
+#     elif choice.strip() == '2':
+#         print('Pls logn-in your account!')
+#         username = input('Enter you username:')
+#         password = input('Enter you password:')
+#         try:
+#             if db[username]['password'] != password:
+#                  print('Inavalid password for the account!')
+#                  continue
+#             try:
+#                 name = db[username]['full_name']
+#                 print(f'Welcometo to servi {name}!')
+#             except KeyError:
+#                 name = db[username]['username']
+#                 print(f'Welcome to servis {name}!')
+#         except KeyError:
+#             print('Account with this name does not exists!')
+#             continue
+#     elif choice.strip() == '3':
+#         for username in db.keys():
+#             try:
+#                 user = db[username]
+#                 print(f"User: {user['username']}, Full name:{user['full_name']}")
+#             except KeyError:
+#                 print(f'User:{user["username"]}')
+#     else:
+#         print('Unsupported operation!')
+#         continue
+
+#     continue_choice = input('Do you want to continue (Yes/No)? ')
+#     if continue_choice.lower().strip() == 'yes':
+#         continue
+#     else:
+#         print('Bye Bye! Good luck!')
+#         break
+
+
+
+
+
+
+
+# Обработка исключений
+                                                       # Операторы try...except
+
+# Ошибки Errors -> связаны с кодом:
+#   SyntaxError
+#   IndentationError
+#   TabError
+
+# Исключения Exceptions -> связаны с неправильным 
+# данными которые передаются в код
+# ZeroDivisionError
+# ArithmeticError
+# NameError
+# IndexError
+# KeyError
+# ValueError
+# ImportError
+# BaseException прородитель всех исключений
+# try:
+#     num = int (input('Enter the number: '))
+#     print(num)
+#     num2 = int(input('Enter the number2:'))
+#     print(num2)
+#     print(num/num2)
+
+# except:
+#     print('неправильные данные!')
+# print('очень важная строчка кода!')
+
+# try...except
+
+# # try:
+#     <body try>
+
+# except: 
+#     <body except> сработает только если ошибка в try
+
+# <else:>
+#     <body else> сработает  если в операторе try нет ошибки
+
+# <finally:>
+#     <body finally> сработает в любом случае
+
+# try:
+#     num1 = int(input('Enter the number: '))
+# except:
+#     print('Invalid values!')
+# else:
+#     print(num1)
+#     print(num1+5)
+# finally:
+#     print('Код закончился!')
+
+# --------------------------------------------------------------------
+# 1. import sys
+
+# list_ = [1,2,3,4,5]
+# index = int(input('Vvedite index: '))
+# try:
+#     res = list_[index]
+#     print(res)
+# except:
+#     import sys
+#     print(f'oop, we catched {sys.exc_info()[0]} error!')
+
+# 2. Exception as e / (error)
+
+# ls = [1,2,3,4,5]
+# while True:
+#     try:
+#         index = int(input('Vvedite index: '))
+#         print(ls[index])
+#     except Exception as e:
+#         print(f'Oops, we catched {e.class} error!')
+
+
+# try:
+#     num1 = int(input('Vvedite chislo1: '))
+#     print(num1 / 0)
+# except (ValueError,ZeroDivisonError):
+#     print('Вы ввели некорректные данные!')
+    
+
+
+# try:
+#     num1 = int(input('Vvedite chislo1: '))
+#     print(num1 / 0)
+# except ValueError:
+#     print('Invalid Values')
+# except ZeroDivisionError:
+#     print('Divide by 0!')
+
+# try:
+#     num1 = int(input('Enter: '))
+#     num2 = int(input('Enter: '))
+#     result = num1 / num2
+# except ZeroDivisionError:
+#     print('Na nol\' delit\' nel\'zya!')
+# except ValueError:
+#     print('Invalid symbols!')
+# else:
+#     print(result)
+# finally:
+#     print('The end!')
+
+# ---------------------------------------------------------------------------
+
+# from string import digits # digits
+
+
+# flag = True
+# symbols = digits + '-' + '.'
+
+# while flag:
+#     num1 = input('Vvedite pervoe chislo: ')
+#     num2 = input('Vvedite pervoe chislo: ')
+#     try:
+#         num1 = float(num1) if '.' in num1 else int(num1)
+#         num2 = float(num2) if '.' in num2 else int(num2)
+       
+    
+#     except ValueError:
+#         print('Vy vveli nepravil\'noe chislo!')
+#         continue
+
+#     operator = input('Vvedite operator(+, -, *, /):')
+#     if operator == '+': 
+#         print (f'Результат: {num1 + num2}')
+#     elif operator == '-':
+#         print (f'Результат: {round(num1 - num2, 2)}')
+#     elif operator == '*':
+#         print (f'Результат: {num1 * num2}')
+#     elif operator == '/':
+#             if num2 == 0:
+#                 print ('На ноль делить нельзя!')
+#             else:
+#                 print (f'Результат: {num1 / num2}')
+#     else:
+#         print('Вы ввели неправильный оператор!')
+#     choice = input('Хотите остановить(yes)')
+#     if choice.lower() == 'yes':
+#         flag =False
+#         print('Пока!')
