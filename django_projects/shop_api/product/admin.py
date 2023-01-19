@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from account.models import CustomUser
+from product.models import Product
 
-admin.site.register(CustomUser)
+admin.site.register(Product)
 
